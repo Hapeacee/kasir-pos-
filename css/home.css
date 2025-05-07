@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9f3fc;
+    color: #1e2f3c;
+}
+
+.container-home {
+    padding: 20px;
+    margin: 20px;
+}
+
+h3, h4 {
+    color: #004a99;
+    margin: 10px 0;
+}
+
+.judul {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    padding: 25px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.card a {
+    color: #004a99;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 16px;
+}

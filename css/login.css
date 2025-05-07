@@ -1,0 +1,38 @@
+body{
+    background-color:deepskyblue;
+}
+
+.container{
+    position: relative;
+    top: 250px;
+    left: 39%;
+    background-color: white;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 1px 2px 5px black;
+    width: 350px;
+    height: 250px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+input{
+    padding: 9px;
+    margin: 5px;
+    width: 90%;
+    height: 35px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border-width: 1px;
+}
+button{
+    font-weight: bold;
+    width: 90%;
+    border-width: 1px;
+    height: 35px;
+    border-radius: 10px;
+    background-color:azure;
+    color: rgb(29, 54, 77);
+}

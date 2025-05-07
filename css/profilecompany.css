@@ -1,0 +1,20 @@
+.container-profile {
+    width: 80%;
+    justify-content: center;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+.profil{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.penjelasan{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}

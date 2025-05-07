@@ -1,0 +1,30 @@
+$diskon = isset($_POST['diskon']);
+    $querydiskon = $mintasub - $_POST(['diskon']);
+    ?>
+    <h4>Subtotal: <?= $mintasub['harga']?></h4>
+    <?php 
+    if($diskon == 1) {
+      echo "<h4>Diskon: $querydiskon;</h4>";  
+    }
+    ?>
+
+    <h3>Diskon: Rp.<?= number_format($diskon, 0 , 2); ?></h3>
+        <h3>Total: Rp.<?= $totalakhir; ?></h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID Penjualan</th>
+            <th>Tanggal Penjualan</th>
+            <th>Total Harga</th>
+        </tr>
+        </thead>
+        <tbody>
+            <?php while ($tampilkanpenjualan = mysqli_fetch_assoc($tampilkanp)){ ?>
+            <tr>
+                <td><?= $tampilkanpenjualan['id_penjualan'] ?></td>
+                <td><?= $tampilkanpenjualan['tanggal_penjualan'] ?></td>
+                <td><?= $tampilkanpenjualan['total_harga'] ?></td>
+            </tr>
+        </tbody>
+<?php } ?>

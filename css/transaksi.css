@@ -1,0 +1,85 @@
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #1e3a8a;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+form input {
+    max-width: 100%;
+}
+
+form button {
+    background-color: #1e3a8a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover {
+    background-color: #3b82f6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #e0e7ff;
+}
+
+.summary p {
+    margin: 0.4rem 0;
+}
+
+.summary {
+    background-color: #eef2ff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.btn-struk {
+    background-color: #10b981;
+    padding: 0.7rem 1rem;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-struk:hover {
+    background-color: #059669;
+}
