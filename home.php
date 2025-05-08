@@ -1,5 +1,11 @@
 <?php  
 include 'koneksi.php';
+session_start();
+
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit();
+}
 
 $produk = "SELECT COUNT(*) AS jumlah_barang FROM produk";
 $queryproduk = mysqli_query($koneksi, $produk);

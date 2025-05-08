@@ -1,5 +1,11 @@
 <?php
 include 'koneksi.php';
+session_start();
+
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit();
+}
 
 $laporan = "SELECT * FROM laporan_bulanan";
 $perintahlaporan = mysqli_query($koneksi, $laporan);

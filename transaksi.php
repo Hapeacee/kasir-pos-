@@ -1,5 +1,12 @@
 <?php
 include 'koneksi.php';
+session_start();
+
+if (!isset($_SESSION['id_user'])) {
+    header("Location: login.php");
+    exit();
+}
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -26,7 +33,6 @@ $tampilan = "SELECT p.id_penjualan, p.tanggal_penjualan, p.quantity, p.total_har
 $tampilkanp = mysqli_query($koneksi, $tampilan);
 
 //laporan harian
-session_start();
 $id_user = $_SESSION['id_user']; // Ambil user_id dari session login
 
 $query_nama_kasir = "SELECT nama_kasir FROM akun WHERE id_user = '$id_user'";

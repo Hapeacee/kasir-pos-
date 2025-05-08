@@ -2,30 +2,26 @@
 include 'koneksi.php';
 session_start();
 
+$error = ''; // variabel error
+
 if (isset($_POST['login'])) {
-    // Ambil data login dari input form
     $user = $_POST['user'];
     $pass = $_POST['pass'];
 
-    // Query untuk memeriksa user dan password
     $login = "SELECT * FROM akun WHERE nama_kasir = '$user' AND password = '$pass'";
     $perintah_login = mysqli_query($koneksi, $login);
 
     if (mysqli_num_rows($perintah_login) == 1) {
-        // Ambil data user dari hasil query
         $data_user = mysqli_fetch_assoc($perintah_login);
-
-        // Set session id_user berdasarkan data yang ditemukan
         $_SESSION['id_user'] = $data_user['id_user'];
-
-        // Redirect ke halaman home setelah login berhasil
         header('Location: ./home.php');
         exit();
     } else {
-        echo '<p>Username atau Password salah!</p>';
+        $error = 'Username atau Password anda salah!';
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +36,9 @@ if (isset($_POST['login'])) {
     <form action="" method="post">
         <div class="container">
         <h3>Login</h3> 
+        <?php if ($error): ?>
+        <p><?= $error; ?></p>
+    <?php endif; ?>
         <input class="username" type="text" name="user" placeholder="Username" required>
         <input class="password" type="password" name="pass" placeholder="Password" required>
         <button type="submit" name="login" class="submit">Submit</button>
