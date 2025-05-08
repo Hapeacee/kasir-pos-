@@ -24,21 +24,20 @@ if (isset($_POST['edit'])) {
 </head>
 
 <body>
-    <div class="navbar">
-        <nav>
-
-            <div class="nav-links">
-                <a class="judul" href="">Point of sales</a>
-                <a href="./home.php">Beranda</a>
-                <a href="./transaksi.php">Transaksi</a>
-                <a href="./produk.php">Produk</a>
-                <a href="./laporan_harian.php">Laporan Harian</a>
-                <a href="./laporan_bulanan.php">Laporan Bulanan</a>
-                <a href="./profil.php">Profil</a>
-                <a href="./login.php">Logout</a>
-            </div>
-        </nav>
+<div class="navbar">
+  <div class="nav-container">
+    <div class="brand">Point of Sales</div>
+    <div class="nav-links">
+      <a href="home.php" class="active">Beranda</a>
+      <a href="transaksi.php">Transaksi</a>
+      <a href="produk.php">Produk</a>
+      <a href="laporan_harian.php">Laporan Harian</a>
+      <a href="laporan_bulanan.php">Laporan Bulanan</a>
+      <a href="companyprofile.php">Profil</a>
+      <a href="logout.php">Logout</a>
     </div>
+  </div>
+</div>
 
     <form action="" method="post">
         <div class="container">
